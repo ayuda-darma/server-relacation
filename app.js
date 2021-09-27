@@ -15,6 +15,7 @@ mongoose.connect('mongodb+srv://ayuda_d:bwamern@cluster0.rw2bg.mongodb.net/db_re
   useFindAndModify: false,
 });
 
+var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // router admin
@@ -22,7 +23,6 @@ const adminRouter = require('./routes/admin');
 const apiRouter = require('./routes/api');
 
 var app = express();
-var cors = require('cors');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
